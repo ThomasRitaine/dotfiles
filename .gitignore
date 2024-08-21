@@ -1,5 +1,7 @@
 *
 !.gitignore
 !LICENSE
+!lazygit/
+!lazygit/**
 !wezterm/
 !wezterm/**
