@@ -3,5 +3,7 @@
 !LICENSE
 !lazygit/
 !lazygit/**
+!nvim/
+!nvim/**
 !wezterm/
 !wezterm/**
