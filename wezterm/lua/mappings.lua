@@ -26,21 +26,23 @@ local keys = function()
 		-- screen
 		keybind({ mod.n }, "F11", act.ToggleFullScreen),
 
-		-- pane and tabs
-		keybind({ mod.c }, "_", act.SplitVertical({ domain = "CurrentPaneDomain" })),
-		keybind({ mod.c }, "9", act.SplitHorizontal({ domain = "CurrentPaneDomain" })),
+		-- pane
+		keybind({ mod.a }, "_", act.SplitVertical({ domain = "CurrentPaneDomain" })),
+		keybind({ mod.a }, "9", act.SplitHorizontal({ domain = "CurrentPaneDomain" })),
 		keybind({ mod.l }, "z", act.TogglePaneZoomState),
-		keybind({ mod.c }, "t", act.SpawnTab("CurrentPaneDomain")),
 		keybind({ mod.c }, "w", act.CloseCurrentPane({ confirm = true })),
-		keybind({ mod.l }, "h", act.ActivatePaneDirection("Left")),
-		keybind({ mod.l }, "j", act.ActivatePaneDirection("Down")),
-		keybind({ mod.l }, "k", act.ActivatePaneDirection("Up")),
-		keybind({ mod.l }, "l", act.ActivatePaneDirection("Right")),
+		keybind({ mod.a }, "h", act.ActivatePaneDirection("Left")),
+		keybind({ mod.a }, "j", act.ActivatePaneDirection("Down")),
+		keybind({ mod.a }, "k", act.ActivatePaneDirection("Up")),
+		keybind({ mod.a }, "l", act.ActivatePaneDirection("Right")),
+		keybind({ mod.a, mod.s }, "H", act.AdjustPaneSize({ "Left", 5 })),
+		keybind({ mod.a, mod.s }, "J", act.AdjustPaneSize({ "Down", 5 })),
+		keybind({ mod.a, mod.s }, "K", act.AdjustPaneSize({ "Up", 5 })),
+		keybind({ mod.a, mod.s }, "L", act.AdjustPaneSize({ "Right", 5 })),
+
+		-- tab
+		keybind({ mod.c }, "t", act.SpawnTab("CurrentPaneDomain")),
 		keybind({ mod.c, mod.s }, "W", act.CloseCurrentTab({ confirm = true })),
-		keybind({ mod.l, mod.s }, "H", act.AdjustPaneSize({ "Left", 5 })),
-		keybind({ mod.l, mod.s }, "J", act.AdjustPaneSize({ "Down", 5 })),
-		keybind({ mod.l, mod.s }, "K", act.AdjustPaneSize({ "Up", 5 })),
-		keybind({ mod.l, mod.s }, "L", act.AdjustPaneSize({ "Right", 5 })),
 		keybind(
 			{ mod.l },
 			"e",
