@@ -29,7 +29,7 @@ local keys = function()
 		-- pane
 		keybind({ mod.a }, "_", act.SplitVertical({ domain = "CurrentPaneDomain" })),
 		keybind({ mod.a }, "9", act.SplitHorizontal({ domain = "CurrentPaneDomain" })),
-		keybind({ mod.l }, "z", act.TogglePaneZoomState),
+		keybind({ mod.a }, "z", act.TogglePaneZoomState),
 		keybind({ mod.c }, "w", act.CloseCurrentPane({ confirm = true })),
 		keybind({ mod.a }, "h", act.ActivatePaneDirection("Left")),
 		keybind({ mod.a }, "j", act.ActivatePaneDirection("Down")),
